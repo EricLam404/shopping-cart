@@ -4,16 +4,21 @@ import './App.css';
 
 function Item() {
     useEffect(() => {
+        fetchItems();
     }, []);
 
     const { id } = useParams();
-    const [item, setItem] = useState({});
-
-    console.log(id);
+    const [item, setItem] = useState({data: {item: ''}});
+    const fetchItems = async () => {
+        const data = await fetch(`https://fortnite-api.com/v2/cosmetics/br/${id}`);
+        const item = await data.json();
+        console.log(item.data.name)
+        setItem(item);
+    }
 
     return (
       <div className="item">
-          <h1>Item</h1>
+          <h1>{item.data.name}</h1>
       </div>
     );
   }
