@@ -25,7 +25,7 @@ function Item(props) {
     return (
       <div className="item">
           <h1>{item.data.name}</h1>
-          <img src={`${item.data.images.icon}`}/>
+          <img src={`${item.data.images.icon}`} alt="Fortnite Item"/>
           <div>{cost}</div>
       </div>
     );
