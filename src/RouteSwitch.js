@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Shop from "./Shop";
-import Nav from "./Nav";
-import Item from "./Item";
+import Shop from "./components/Shop";
+import Nav from "./components/Nav";
+import Item from "./components/Item";
 
 const RouteSwitch = () => {
   return (

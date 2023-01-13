@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import '../css/Shop.css';
 
 function Shop(){
     useEffect(() => {
@@ -14,11 +15,11 @@ function Shop(){
     }
 
     return (
-        <div>
-            <h1>Shop Page</h1>
+        <div className='grid'>
             {items.map(item => {
                 return(
                     <Link key={item.itemId} to={`/shop/${item.itemId}`}>
+                        <img src={`${item.item.images.icon}`} alt="Fortnite Item" className='small-img'/>
                         <h1>{item.item.name}</h1>
                     </Link>
                 )
