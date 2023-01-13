@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Item(props) {
+function Cart(props) {
     const [cart, setCart] = useState([]);
     return (
       <div className="cart">
@@ -14,4 +14,4 @@ function Item(props) {
     );
   }
 
-export default Item;
+export default Cart;

@@ -8,25 +8,22 @@ function Item(props) {
     }, []);
 
     const { id } = useParams();
-    const [cost, setCost] = useState(0);
     const [item, setItem] = useState({
-        data: {
-            item: '',
-            images: {icon: ""}
-        }
+        name: "",
+        images: {icon: ""}
     });
     const fetchItems = async () => {
-        const data = await fetch(`https://fortnite-api.com/v2/cosmetics/br/${id}`);
+        const data = await fetch(`https://fortnite-api.theapinetwork.com/item/get?id=${id}`);
         const item = await data.json();
-        console.log(item)
-        setItem(item);
+        console.log(item.data.item);
+        setItem(item.data.item);
     }
 
     return (
       <div className="item">
-          <h1>{item.data.name}</h1>
-          <img src={`${item.data.images.icon}`} alt="Fortnite Item"/>
-          <div>{cost}</div>
+          <h1>{item.name}</h1>
+          <img src={`${item.images.icon}`} alt="Fortnite Item"/>
+          <div>{item.cost}</div>
       </div>
     );
   }
