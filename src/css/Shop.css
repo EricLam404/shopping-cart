@@ -8,7 +8,23 @@
     align-items: center;
 }
 
-.small-img{
+.small-img {
     height: 128px;
     width: 128px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.flex:hover{
+    border: 1px solid black; 
+    padding: 15px;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
 }

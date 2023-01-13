@@ -18,7 +18,7 @@ function Shop(){
         <div className='grid'>
             {items.map(item => {
                 return(
-                    <Link key={item.itemId} to={`/shop/${item.itemId}`}>
+                    <Link key={item.itemId} to={`/shop/${item.itemId}`} className="flex">
                         <img src={`${item.item.images.icon}`} alt="Fortnite Item" className='small-img'/>
                         <h1>{item.item.name}</h1>
                     </Link>
