@@ -2,6 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 function Cart(props) {
     const [cart, setCart] = useState([]);
+
+    const calculatePrice = () => {
+      const items = [...cart];
+      let total = 0;
+      for(let i = 0; i < items.length; i++){
+        total += items[i];
+      }
+      return total;
+    }
     return (
       <div className="cart">
           <h1>Shopping Cart</h1>
