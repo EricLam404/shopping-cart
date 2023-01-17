@@ -19,6 +19,8 @@ function Cart(props) {
                 <h1>{item.name}</h1>
                 )
             })}
+          <h1>Total</h1>
+          <div>{calculatePrice()}</div>
       </div>
     );
   }
