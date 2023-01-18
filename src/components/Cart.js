@@ -19,8 +19,15 @@ function Cart(props) {
                 <h1>{item.name}</h1>
                 )
             })}
-          <h1>Total</h1>
+          <h1>Subtotal</h1>
           <div>{calculatePrice()}</div>
+          <h1>Total</h1>
+          <div>
+            <div>Subtotal: {calculatePrice()}</div>
+            <div>Tax: {calculatePrice() * 0.08875}</div>
+            <div>-----------</div>
+            <div>Total: {calculatePrice() * 1.08875}</div>
+          </div>
       </div>
     );
   }
