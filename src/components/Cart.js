@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function Cart(props) {
     const [cart, setCart] = useState([]);
+    const [total, setTotal] = useState(0);
 
     const calculatePrice = () => {
       const items = [...cart];
