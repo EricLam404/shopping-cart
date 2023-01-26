@@ -12,6 +12,8 @@ function Cart(props) {
       }
       return total;
     }
+
+    setTotal(calculatePrice());
     return (
       <div className="cart">
           <h1>Shopping Cart</h1>
@@ -21,13 +23,13 @@ function Cart(props) {
                 )
             })}
           <h1>Subtotal</h1>
-          <div>{calculatePrice()}</div>
+          <div>{total}</div>
           <h1>Total</h1>
           <div>
-            <div>Subtotal: {calculatePrice()}</div>
-            <div>Tax: {calculatePrice() * 0.08875}</div>
+            <div>Subtotal: {total}</div>
+            <div>Tax: {total * 0.08875}</div>
             <div>-----------</div>
-            <div>Total: {calculatePrice() * 1.08875}</div>
+            <div>Total: {total * 1.08875}</div>
           </div>
       </div>
     );
