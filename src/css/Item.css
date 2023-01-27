@@ -1,0 +1,22 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 2rem;
+}
+
+.name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.item-img {
+    width: auto;
+    height: calc(30vh + 150px);
+    margin-right: 10px;
+}
+
+.cost {
+    color: #ff0000;
+}

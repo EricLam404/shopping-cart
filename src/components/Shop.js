@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Shop.css';
-import Cart from './Cart';
 
 function Shop(){
     useEffect(() => {
@@ -17,7 +16,6 @@ function Shop(){
 
     return (
         <div>
-            <Cart/>
             <div className='grid'>
                 {items.map(item => {
                     return(
