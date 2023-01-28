@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import '../css/Item.css';
+import Cart from './Cart';
 
 function Item({ handleAddToCart }) {
     useEffect(() => {
@@ -33,6 +34,7 @@ function Item({ handleAddToCart }) {
                     }
                 )}
             }>Add to Cart</button>
+            <Cart/>
       </div>
     );
   }
