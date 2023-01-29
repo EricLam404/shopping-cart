@@ -4,7 +4,7 @@ import './css/App.css';
 function App() {
   return (
     <div className="App">
-        Home
+        <div>Fortnite Item Shop</div>
     </div>
   );
 }
