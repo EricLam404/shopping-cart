@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Nav.css'
+import Cart from './Cart';
 
 function Nav() {
     const navStyle = {
@@ -16,6 +17,8 @@ function Nav() {
                 <Link style={navStyle} to="/">
                     <li>Home</li>
                 </Link>
+
+                <li><Cart/></li>
             </ul>
         </nav>
     );
