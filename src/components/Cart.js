@@ -30,7 +30,7 @@ function Cart(props) {
               <div key={index} className="cart-item">
                 <img src={item.img} className="cart-item-img" alt="item"/>
                 <span className="cart-item-name">{item.name}</span>
-                <span className="cart-item-price">{item.cost}</span>
+                <span className="cart-item-price">{item.cost} v-bucks</span>
               </div>
             ))}
             <div className='cart-total'>Total: {total}</div>
