@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { CartContext } from './CartItems';
 import "../css/Cart.css"
 
 function Cart(props) {
     const [showCart, setShowCart] = useState(false);
-    const [cart, setCart] = useState([]);
-    const [total, setTotal] = useState(0);
+    const {cart, handleAddToCart} = useContext(CartContext);
+    console.log(cart);
 
     const handleCartClick = () => {
       setShowCart(!showCart);
-    }
-
-    const handleAddToCart = (item) => {
-      setCart([...cart, item]);
     }
 
     const calculatePrice = () => {
@@ -23,11 +20,11 @@ function Cart(props) {
       return total;
     }
 
-    //setTotal(calculatePrice());
+    const total = calculatePrice();
 
     return (
       <div className="cart-container">
-            <img src="./imgs/cart.svg" onClick={handleCartClick} className="cart-icon" alt="Cart"/>
+            <div onClick={handleCartClick} className="cart-icon">Cart</div>
             { showCart && (
                 <div className="cart-items-container">
                     {cart.map((item, index) => (

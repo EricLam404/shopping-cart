@@ -17,7 +17,6 @@ function Nav() {
                 <Link style={navStyle} to="/">
                     <li>Home</li>
                 </Link>
-
                 <li><Cart/></li>
             </ul>
         </nav>
