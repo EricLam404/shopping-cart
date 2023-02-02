@@ -28,7 +28,7 @@ function Item() {
             <h1 className="name">{item.name}</h1>
             <img src={`${item.images.icon}`} alt="Fortnite Item" className="item-img"/>
             <div className="cost">{item.cost}</div>
-            <button className="add-to-cart-button" onClick={() => {handleAddToCart({ name: item.name, image: item.images.icon, cost: item.cost })}}>Add to Cart</button>
+            <button className="add-to-cart-button" onClick={() => {handleAddToCart({ name: item.name, img: item.images.icon, cost: item.cost })}}>Add to Cart</button>
       </div>
     );
   }

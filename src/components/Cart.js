@@ -5,7 +5,6 @@ import "../css/Cart.css"
 function Cart(props) {
     const [showCart, setShowCart] = useState(false);
     const {cart, handleAddToCart} = useContext(CartContext);
-    console.log(cart);
 
     const handleCartClick = () => {
       setShowCart(!showCart);
@@ -15,7 +14,7 @@ function Cart(props) {
       const items = [...cart];
       let total = 0;
       for(let i = 0; i < items.length; i++){
-        total += items[i];
+        total += items[i].cost;
       }
       return total;
     }
@@ -24,18 +23,19 @@ function Cart(props) {
 
     return (
       <div className="cart-container">
-            <div onClick={handleCartClick} className="cart-icon">Cart</div>
-            { showCart && (
-                <div className="cart-items-container">
-                    {cart.map((item, index) => (
-                        <div key={index} className="cart-item">
-                            <img src={item.img} className="cart-item-img" alt="item"/>
-                            <span className="cart-item-name">{item.name}</span>
-                            <span className="cart-item-price">{item.price}</span>
-                        </div>
-                    ))}
-                </div>
-            )}
+        <div onClick={handleCartClick} className="cart-icon">Cart</div>
+          { showCart && (
+          <div className="cart-items-container">
+            {cart.map((item, index) => (
+              <div key={index} className="cart-item">
+                <img src={item.img} className="cart-item-img" alt="item"/>
+                <span className="cart-item-name">{item.name}</span>
+                <span className="cart-item-price">{item.cost}</span>
+              </div>
+            ))}
+            <div className='cart-total'>Total: {total}</div>
+          </div>
+          )}
         </div>
     );
   }
