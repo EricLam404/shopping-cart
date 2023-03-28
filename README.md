@@ -3,5 +3,7 @@ This repository contains code for a Fortnite shopping cart application that util
 
 This application was created using the Fortnite Item Shop API, React.js and CSS.
 
+This is part of The Odin Project online course.
+
 ## Live Site
 https://ericlam404.github.io/shopping-cart/
